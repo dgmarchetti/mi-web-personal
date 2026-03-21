@@ -1,0 +1,81 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	return posts.map(post => ({
+		params: { id: post.id },
+		props: { post },
+	}));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const formatDate = (date: Date) => {
+	return date.toLocaleDateString('es-ES', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+	});
+};
+---
+
+<Layout title={`${post.data.title} | Blog`}>
+	<main class="max-w-3xl mx-auto px-4 py-16">
+		<a href="/blog" class="inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-900 mb-12 transition-colors">
+			← Volver al blog
+		</a>
+
+		<article class="prose prose-neutral prose-lg prose-invert-0 max-w-none">
+			<header class="mb-12 not-prose">
+				<time datetime={post.data.pubDate.toISOString()} class="text-neutral-400 block mb-4">
+					{formatDate(post.data.pubDate)}
+				</time>
+				<h1 class="text-5xl font-bold text-neutral-900 leading-tight mb-6">
+					{post.data.title}
+				</h1>
+				<p class="text-xl text-neutral-600 leading-relaxed italic">
+					{post.data.description}
+				</p>
+			</header>
+
+			<div class="blog-content">
+				<Content />
+			</div>
+
+			<footer class="mt-20 pt-12 border-t border-neutral-100 not-prose">
+				{post.data.tags && (
+					<div class="flex flex-wrap gap-2">
+						{post.data.tags.map(tag => (
+							<span class="px-3 py-1 bg-neutral-50 text-neutral-600 text-sm rounded-full">
+								#{tag}
+							</span>
+						))}
+					</div>
+				)}
+			</footer>
+		</article>
+	</main>
+</Layout>
+
+<style is:global>
+	@reference "../../styles/global.css";
+
+	.blog-content h2 {
+		@apply text-3xl font-bold text-neutral-800 mt-12 mb-6;
+	}
+	.blog-content p {
+		@apply text-neutral-700 leading-relaxed mb-6;
+	}
+	.blog-content pre {
+		@apply rounded-xl p-6 bg-neutral-900 text-neutral-100 overflow-x-auto my-8 shadow-inner;
+	}
+	.blog-content code {
+		@apply px-1.5 py-0.5 rounded bg-neutral-100 text-neutral-800 font-mono text-sm;
+	}
+	.blog-content pre code {
+		@apply bg-transparent text-inherit p-0;
+	}
+</style>

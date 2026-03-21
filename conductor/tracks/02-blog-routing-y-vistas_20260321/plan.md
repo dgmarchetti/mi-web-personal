@@ -5,7 +5,7 @@ Implement the blog routing and rendering system using Astro v6 Content Collectio
 
 ## Key Files & Context
 - `src/pages/blog/index.astro`: Article list view.
-- `src/pages/blog/[slug].astro`: Dynamic article detail view.
+- `src/pages/blog/[id].astro`: Dynamic article detail view.
 - `src/content.config.ts`: Configuration for Astro Content Collections.
 - `src/layouts/Layout.astro`: Base layout to be used.
 - `src/styles/global.css`: Global styles including Tailwind.
@@ -13,19 +13,19 @@ Implement the blog routing and rendering system using Astro v6 Content Collectio
 ## Implementation Steps
 
 ### Phase 1: Content Collection & Initial Routing
-- [ ] Task: Update Content Collection Configuration
-    - [ ] Verify `src/content.config.ts` has the 'blog' collection defined with the required schema (title, description, date, draft, tags).
-    - [ ] Create mock blog posts in `src/content/blog/` to test rendering (including one draft).
-- [ ] Task: Implement Blog Index Page (`/blog`)
-    - [ ] Create `src/pages/blog/index.astro`.
-    - [ ] Implement `getCollection('blog')` with environment-aware draft filtering.
-    - [ ] Create a basic minimalist list structure with title, description, and short numeric date.
-    - [ ] Apply initial Tailwind classes for organic styling.
-- [ ] Task: Implement Dynamic Post Page (`/blog/[slug]`)
-    - [ ] Create `src/pages/blog/[slug].astro`.
-    - [ ] Implement `getStaticPaths` to generate routes for all blog posts.
-    - [ ] Use the `render()` function to display MDX content.
-    - [ ] Integrate with the base `Layout`.
+- [x] Task: Update Content Collection Configuration
+    - [x] Verify `src/content.config.ts` has the 'blog' collection defined with the required schema (title, description, date, draft, tags).
+    - [x] Create mock blog posts in `src/content/blog/` to test rendering (including one draft).
+- [x] Task: Implement Blog Index Page (`/blog`)
+    - [x] Create `src/pages/blog/index.astro`.
+    - [x] Implement `getCollection('blog')` with environment-aware draft filtering.
+    - [x] Create a basic minimalist list structure with title, description, and short numeric date.
+    - [x] Apply initial Tailwind classes for organic styling.
+- [x] Task: Implement Dynamic Post Page (`/blog/[id]`)
+    - [x] Create `src/pages/blog/[id].astro`.
+    - [x] Implement `getStaticPaths` to generate routes for all blog posts.
+    - [x] Use the `render()` function to display MDX content.
+    - [x] Integrate with the base `Layout`.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Content Collection & Initial Routing' (Protocol in workflow.md)
 
 ### Phase 2: Enhanced Features & Metadata
