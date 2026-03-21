@@ -1,0 +1,25 @@
+# Implementation Plan: 01-fundamentos-ui-astro
+
+## Phase 1: Setup and Cleaning
+- [ ] Task: Clean existing Astro files.
+    - [ ] Remove `src/components/Welcome.astro`.
+    - [ ] Clean `src/pages/index.astro`.
+- [ ] Task: Configure Tailwind CSS.
+    - [ ] Install Tailwind (if not already installed).
+    - [ ] Update `tailwind.config.mjs` with neutral palette and organic shapes.
+- [ ] Task: Conductor - User Manual Verification 'Setup and Cleaning' (Protocol in workflow.md)
+
+## Phase 2: Base Components
+- [ ] Task: Create core components.
+    - [ ] Implement `src/components/Header.astro`.
+    - [ ] Implement `src/components/Footer.astro`.
+- [ ] Task: Update Base Layout.
+    - [ ] Update `src/layouts/Layout.astro` to include Header and Footer.
+    - [ ] Apply organic design (soft backgrounds, rounded containers).
+- [ ] Task: Conductor - User Manual Verification 'Base Components' (Protocol in workflow.md)
+
+## Phase 3: Home Page and Content Area
+- [ ] Task: Implement Main Page structure.
+    - [ ] Update `src/pages/index.astro` using the Layout.
+    - [ ] Prepare a `<slot />` or container for future MDX content.
+- [ ] Task: Conductor - User Manual Verification 'Home Page and Content Area' (Protocol in workflow.md)
