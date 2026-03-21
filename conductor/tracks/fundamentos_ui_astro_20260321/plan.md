@@ -9,14 +9,14 @@
     - [x] Update `tailwind.config.mjs` with neutral palette and organic shapes.
 - [x] Task: Conductor - User Manual Verification 'Setup and Cleaning' (Protocol in workflow.md)
 
-## Phase 2: Base Components
+## Phase 2: Base Components [checkpoint: f684536]
 - [x] Task: Create core components. [checkpoint: 3e472f6]
     - [x] Implement `src/components/Header.astro`.
     - [x] Implement `src/components/Footer.astro`.
 - [x] Task: Update Base Layout. [checkpoint: f4ab652]
     - [x] Update `src/layouts/Layout.astro` to include Header and Footer.
     - [x] Apply organic design (soft backgrounds, rounded containers).
-- [ ] Task: Conductor - User Manual Verification 'Base Components' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Base Components' (Protocol in workflow.md)
 
 ## Phase 3: Home Page and Content Area
 - [ ] Task: Implement Main Page structure.
