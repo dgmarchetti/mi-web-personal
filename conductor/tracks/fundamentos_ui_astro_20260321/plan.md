@@ -4,9 +4,9 @@
 - [x] Task: Clean existing Astro files. [checkpoint: 61ac04e]
     - [x] Remove `src/components/Welcome.astro`.
     - [x] Clean `src/pages/index.astro`.
-- [ ] Task: Configure Tailwind CSS.
-    - [ ] Install Tailwind (if not already installed).
-    - [ ] Update `tailwind.config.mjs` with neutral palette and organic shapes.
+- [x] Task: Configure Tailwind CSS. [checkpoint: 6d7d5c4]
+    - [x] Install Tailwind (if not already installed).
+    - [x] Update `tailwind.config.mjs` with neutral palette and organic shapes.
 - [ ] Task: Conductor - User Manual Verification 'Setup and Cleaning' (Protocol in workflow.md)
 
 ## Phase 2: Base Components
