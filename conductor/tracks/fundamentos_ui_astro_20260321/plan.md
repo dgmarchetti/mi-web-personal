@@ -13,9 +13,9 @@
 - [x] Task: Create core components. [checkpoint: 3e472f6]
     - [x] Implement `src/components/Header.astro`.
     - [x] Implement `src/components/Footer.astro`.
-- [ ] Task: Update Base Layout.
-    - [ ] Update `src/layouts/Layout.astro` to include Header and Footer.
-    - [ ] Apply organic design (soft backgrounds, rounded containers).
+- [x] Task: Update Base Layout. [checkpoint: f4ab652]
+    - [x] Update `src/layouts/Layout.astro` to include Header and Footer.
+    - [x] Apply organic design (soft backgrounds, rounded containers).
 - [ ] Task: Conductor - User Manual Verification 'Base Components' (Protocol in workflow.md)
 
 ## Phase 3: Home Page and Content Area
