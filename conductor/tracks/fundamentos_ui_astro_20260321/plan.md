@@ -10,9 +10,9 @@
 - [x] Task: Conductor - User Manual Verification 'Setup and Cleaning' (Protocol in workflow.md)
 
 ## Phase 2: Base Components
-- [ ] Task: Create core components.
-    - [ ] Implement `src/components/Header.astro`.
-    - [ ] Implement `src/components/Footer.astro`.
+- [x] Task: Create core components. [checkpoint: 3e472f6]
+    - [x] Implement `src/components/Header.astro`.
+    - [x] Implement `src/components/Footer.astro`.
 - [ ] Task: Update Base Layout.
     - [ ] Update `src/layouts/Layout.astro` to include Header and Footer.
     - [ ] Apply organic design (soft backgrounds, rounded containers).
