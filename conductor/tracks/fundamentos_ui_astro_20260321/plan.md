@@ -18,8 +18,8 @@
     - [x] Apply organic design (soft backgrounds, rounded containers).
 - [x] Task: Conductor - User Manual Verification 'Base Components' (Protocol in workflow.md)
 
-## Phase 3: Home Page and Content Area
+## Phase 3: Home Page and Content Area [checkpoint: 068b771]
 - [x] Task: Implement Main Page structure. [checkpoint: 6ac2370]
     - [x] Update `src/pages/index.astro` using the Layout.
     - [x] Prepare a `<slot />` or container for future MDX content.
-- [ ] Task: Conductor - User Manual Verification 'Home Page and Content Area' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Home Page and Content Area' (Protocol in workflow.md)
