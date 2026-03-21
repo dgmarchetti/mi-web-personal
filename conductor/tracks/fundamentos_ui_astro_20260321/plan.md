@@ -1,13 +1,13 @@
 # Implementation Plan: 01-fundamentos-ui-astro
 
-## Phase 1: Setup and Cleaning
+## Phase 1: Setup and Cleaning [checkpoint: 38d95dc]
 - [x] Task: Clean existing Astro files. [checkpoint: 61ac04e]
     - [x] Remove `src/components/Welcome.astro`.
     - [x] Clean `src/pages/index.astro`.
 - [x] Task: Configure Tailwind CSS. [checkpoint: 6d7d5c4]
     - [x] Install Tailwind (if not already installed).
     - [x] Update `tailwind.config.mjs` with neutral palette and organic shapes.
-- [ ] Task: Conductor - User Manual Verification 'Setup and Cleaning' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Setup and Cleaning' (Protocol in workflow.md)
 
 ## Phase 2: Base Components
 - [ ] Task: Create core components.
