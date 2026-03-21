@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const posts = (await getCollection('blog'))
+	.filter(post => !post.data.draft)
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const formatDate = (date: Date) => {
+	return date.toLocaleDateString('es-ES', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+	});
+};
+---
+
+<Layout title="Blog | mi-web-personal">
+	<section class="prose prose-neutral max-w-none">
+		<h1 class="text-accent-earth mb-10">Bitácora de Automatización</h1>
+		
+		<div class="space-y-12">
+			{posts.map((post) => (
+				<article class="group relative flex flex-col items-start">
+					<h2 class="text-2xl font-bold mb-2">
+						<a href={`/blog/${post.id}/`} class="text-text-main group-hover:text-accent-earth transition-colors">
+							{post.data.title}
+						</a>
+					</h2>
+					<time datetime={post.data.pubDate.toISOString()} class="text-sm text-text-main/50 mb-4 block">
+						{formatDate(post.data.pubDate)}
+					</time>
+					<p class="text-text-main/80 leading-relaxed mb-4">
+						{post.data.description}
+					</p>
+					<div class="flex flex-wrap gap-2">
+						{post.data.tags?.map((tag) => (
+							<span class="px-3 py-1 bg-accent-green/10 text-accent-earth text-xs rounded-full border border-accent-green/10">
+								{tag}
+							</span>
+						))}
+					</div>
+				</article>
+			))}
+		</div>
+
+		{posts.length === 0 && (
+			<p class="text-center text-text-main/50 py-20">Aún no hay publicaciones. Vuelve pronto.</p>
+		)}
+	</section>
+</Layout>
