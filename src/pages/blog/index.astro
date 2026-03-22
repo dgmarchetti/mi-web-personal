@@ -21,41 +21,49 @@ const formatDate = (date: Date) => {
 
 <Layout title="Blog | Mi Web Personal">
 	<main class="max-w-4xl mx-auto px-4 py-12">
-		<header class="mb-12">
-			<h1 class="text-4xl font-bold text-neutral-900 mb-4 font-organic">Blog</h1>
-			<p class="text-lg text-neutral-600">Compartiendo aprendizajes sobre GenAI, automatización y desarrollo "Zero-Budget".</p>
+		<header class="mb-16 border-b border-neutral-warm/20 dark:border-neutral-400/20 pb-12">
+			<h1 class="text-5xl font-bold text-text-main mb-6 font-organic">Blog</h1>
+			<p class="text-xl text-text-muted max-w-2xl leading-relaxed">
+				Compartiendo aprendizajes sobre GenAI, automatización y desarrollo "Zero-Budget".
+			</p>
 		</header>
 
-		<ul class="space-y-12">
+		<ul class="space-y-16">
 			{posts.map((post) => (
 				<li class="group">
 					<article>
-						<time datetime={post.data.pubDate.toISOString()} class="text-sm text-neutral-400 block mb-2">
+						<time datetime={post.data.pubDate.toISOString()} class="text-sm font-medium text-text-muted uppercase tracking-wider block mb-3">
 							{formatDate(post.data.pubDate)}
 						</time>
-						<h2 class="text-2xl font-semibold text-neutral-800 group-hover:text-primary transition-colors mb-3">
+						<h2 class="text-3xl font-bold text-text-main group-hover:text-accent-earth transition-colors mb-4">
 							<a href={`/blog/${post.id}`}>
 								{post.data.title}
 							</a>
 						</h2>
-						<p class="text-neutral-600 leading-relaxed mb-4">
+						<p class="text-lg text-text-muted leading-relaxed mb-6 max-w-3xl">
 							{post.data.description}
 						</p>
 						<div class="flex items-center gap-4">
-							<a href={`/blog/${post.id}`} class="text-sm font-medium text-neutral-900 hover:underline underline-offset-4">
-								Leer más →
+							<a href={`/blog/${post.id}`} class="text-base font-bold text-text-main hover:text-accent-earth transition-colors inline-flex items-center gap-2 group/link">
+								Leer más 
+								<span class="transform group-hover/link:translate-x-1 transition-transform">→</span>
 							</a>
 						</div>
 					</article>
 				</li>
 			))}
 		</ul>
+		
+		{posts.length === 0 && (
+			<div class="text-center py-24 border-2 border-dashed border-neutral-warm/20 dark:border-neutral-400/20 rounded-organic-lg">
+				<p class="text-xl text-text-muted">Aún no hay publicaciones. Vuelve pronto.</p>
+			</div>
+		)}
 	</main>
 </Layout>
 
 <style>
 	.font-organic {
-		/* Assuming a specific organic font or styling is applied in global.css or local style */
 		letter-spacing: -0.02em;
 	}
 </style>

@@ -20,10 +20,10 @@ const { title = "mi-web-personal" } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="min-h-screen flex flex-col bg-neutral-soft selection:bg-accent-green/30">
+	<body class="min-h-screen flex flex-col bg-bg-base text-text-main selection:bg-accent-green/30">
 		<Header />
-		<main class="flex-grow container mx-auto px-6 max-w-4xl">
-			<div class="bg-white/60 backdrop-blur-sm rounded-organic-lg p-8 md:p-12 shadow-sm border border-neutral-warm/20">
+		<main class="flex-grow container mx-auto px-6 max-w-4xl py-12">
+			<div class="bg-white/60 dark:bg-neutral-500/30 backdrop-blur-sm rounded-organic-lg p-8 md:p-12 shadow-sm border border-neutral-warm/20 dark:border-neutral-400/20 transition-colors duration-400">
 				<slot />
 			</div>
 		</main>

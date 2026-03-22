@@ -9,7 +9,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test:contrast": "node scripts/test-contrast.js",
+    "test:a11y": "pa11y-ci"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
@@ -17,6 +19,8 @@
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^5.0.2"
+    "@astrojs/mdx": "^5.0.2",
+    "get-contrast": "^3.0.0",
+    "pa11y-ci": "^4.1.0"
   }
 }

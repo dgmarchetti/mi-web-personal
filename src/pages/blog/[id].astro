@@ -24,19 +24,19 @@ const formatDate = (date: Date) => {
 
 <Layout title={`${post.data.title} | Blog`}>
 	<main class="max-w-3xl mx-auto px-4 py-16">
-		<a href="/blog" class="inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-900 mb-12 transition-colors">
+		<a href="/blog" class="inline-flex items-center gap-2 text-text-muted hover:text-text-main mb-12 transition-colors">
 			← Volver al blog
 		</a>
 
-		<article class="prose prose-neutral prose-lg prose-invert-0 max-w-none">
+		<article class="prose prose-neutral dark:prose-invert prose-lg max-w-none">
 			<header class="mb-12 not-prose">
-				<time datetime={post.data.pubDate.toISOString()} class="text-neutral-400 block mb-4">
+				<time datetime={post.data.pubDate.toISOString()} class="text-text-muted block mb-4 font-medium">
 					{formatDate(post.data.pubDate)}
 				</time>
-				<h1 class="text-5xl font-bold text-neutral-900 leading-tight mb-6">
+				<h1 class="text-5xl font-bold text-text-main leading-tight mb-6">
 					{post.data.title}
 				</h1>
-				<p class="text-xl text-neutral-600 leading-relaxed italic">
+				<p class="text-xl text-text-muted leading-relaxed italic border-l-4 border-accent-earth pl-6 py-2">
 					{post.data.description}
 				</p>
 			</header>
@@ -45,11 +45,11 @@ const formatDate = (date: Date) => {
 				<Content />
 			</div>
 
-			<footer class="mt-20 pt-12 border-t border-neutral-100 not-prose">
+			<footer class="mt-20 pt-12 border-t border-neutral-warm/20 dark:border-neutral-400/20 not-prose">
 				{post.data.tags && (
 					<div class="flex flex-wrap gap-2">
 						{post.data.tags.map(tag => (
-							<span class="px-3 py-1 bg-neutral-50 text-neutral-600 text-sm rounded-full">
+							<span class="px-3 py-1 bg-bg-warm/50 dark:bg-neutral-500/30 text-text-muted text-sm rounded-full border border-neutral-warm/10 dark:border-neutral-400/10">
 								#{tag}
 							</span>
 						))}
@@ -64,18 +64,21 @@ const formatDate = (date: Date) => {
 	@reference "../../styles/global.css";
 
 	.blog-content h2 {
-		@apply text-3xl font-bold text-neutral-800 mt-12 mb-6;
+		@apply text-3xl font-bold text-text-main mt-12 mb-6;
 	}
 	.blog-content p {
-		@apply text-neutral-700 leading-relaxed mb-6;
+		@apply text-text-main/90 leading-relaxed mb-6;
 	}
 	.blog-content pre {
-		@apply rounded-xl p-6 bg-neutral-900 text-neutral-100 overflow-x-auto my-8 shadow-inner;
+		@apply rounded-xl p-6 bg-neutral-900 text-neutral-100 dark:bg-black/40 overflow-x-auto my-8 shadow-inner border border-white/5;
 	}
 	.blog-content code {
-		@apply px-1.5 py-0.5 rounded bg-neutral-100 text-neutral-800 font-mono text-sm;
+		@apply px-1.5 py-0.5 rounded bg-bg-warm/50 dark:bg-neutral-500/30 text-text-main font-mono text-sm;
 	}
 	.blog-content pre code {
 		@apply bg-transparent text-inherit p-0;
+	}
+	.blog-content a {
+		@apply text-accent-earth hover:underline underline-offset-4 decoration-accent-earth/40;
 	}
 </style>

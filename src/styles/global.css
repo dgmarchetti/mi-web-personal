@@ -1,18 +1,92 @@
 @import "tailwindcss";
 
-@theme {
-  --color-neutral-soft: #f8f9fa;
-  --color-neutral-warm: #f1ede4;
-  --color-accent-earth: #8d7d66;
-  --color-accent-green: #a8b8a0;
-  --color-text-main: #2d2d2d;
+:root {
+  --bg-base: #f8f9fa;
+  --bg-warm: #f1ede4;
+  --text-main: #2d2d2d;
+  --text-muted: #5a5a5a;
+  
+  /* Earth Accents */
+  --accent-earth: #7a6a53;
+  --accent-earth-contrast: #4a3a2a;
+  
+  --accent-green: #5a6a54;
+
+  /* Standard Light Neutrals (Tailwind Defaults or similar) */
+  --neutral-400: oklch(70.8% 0 0);
+  --neutral-500: oklch(55.6% 0 0);
   
   --radius-organic: 2.5rem;
   --radius-organic-lg: 4rem;
 }
 
+/* System Preference & Manual Override */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-base: #1c1b19;
+    --bg-warm: #2a2824;
+    --text-main: #f2e8cf;
+    --text-muted: #bcb196;
+    
+    /* Dark Mode Earth Accents */
+    --accent-earth: #d4a373;
+    --accent-earth-contrast: #3a2a1a;
+    
+    --accent-green: #c4d1c0;
+
+    /* RE-DEFINING NEUTRALS FOR DARK MODE: 
+       We make them much darker and slightly warm to avoid "light gray" issues */
+    --neutral-400: #3d3a35; /* Dark Stone (L ~25%) - High contrast with Ochre (4.2:1) */
+    --neutral-500: #2a2824; /* Deep Earth (L ~15%) - Very high contrast with Ochre (5.8:1) */
+  }
+}
+
+.dark {
+  --bg-base: #1c1b19;
+  --bg-warm: #2a2824;
+  --text-main: #f2e8cf;
+  --text-muted: #bcb196;
+  --accent-earth: #d4a373;
+  --accent-earth-contrast: #3a2a1a;
+  --accent-green: #c4d1c0;
+  --neutral-400: #3d3a35;
+  --neutral-500: #2a2824;
+}
+
+@theme {
+  --radius-organic: var(--radius-organic);
+  --radius-organic-lg: var(--radius-organic-lg);
+
+  --color-bg-base: var(--bg-base);
+  --color-bg-warm: var(--bg-warm);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  
+  /* Redefining Tailwind Neutrals */
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-500: var(--neutral-500);
+  
+  --color-accent-earth: var(--accent-earth);
+  --color-accent-earth-contrast: var(--accent-earth-contrast);
+  --color-accent-green: var(--accent-green);
+  
+  --color-neutral-soft: var(--bg-base);
+  --color-neutral-warm: var(--bg-warm);
+}
+
 body {
-  background-color: var(--color-neutral-soft);
-  color: var(--color-text-main);
+  background-color: var(--bg-base);
+  color: var(--text-main);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a, button, input, textarea {
+  transition: background-color 0.3s ease, 
+              color 0.3s ease, 
+              border-color 0.3s ease, 
+              opacity 0.3s ease;
 }

@@ -1,0 +1,16 @@
+{
+  "defaults": {
+    "concurrency": 2,
+    "timeout": 30000,
+    "useIncognitoContext": true,
+    "viewport": {
+      "width": 1280,
+      "height": 1024
+    },
+    "standard": "WCAG2AA"
+  },
+  "urls": [
+    "http://localhost:4321/",
+    "http://localhost:4321/blog"
+  ]
+}

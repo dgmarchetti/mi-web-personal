@@ -8,3 +8,6 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [ ] **Track: Definir paleta de colores accesible (WCAG 2.1 AA) para modo claro y oscuro utilizando variables de CSS en Tailwind v4, asegurando contrastes de 4.5:1 para texto normal y 3:1 para texto grande.**
 *Link: [./tracks/03-accessible-color-palette_20260321/](./tracks/03-accessible-color-palette_20260321/)*
 
+- [ ] **Track: Implementar un componente de alternancia de tema (claro/oscuro) en la interfaz, con persistencia en localStorage y prevención de destellos de contenido no tematizado (FOUC).**
+*Link: [./tracks/04-theme-toggle-implementation_20260321/](./tracks/04-theme-toggle-implementation_20260321/)*
+

@@ -13,15 +13,15 @@ Define a WCAG 2.1 AA accessible color palette for light and dark modes, using Ta
 ## Implementation Steps
 
 ### Phase 1: Palette Definition & Tokenization
-- [ ] Task: Define WCAG 2.1 AA Accessible Color Tokens
-    - [ ] Research and select neutral/earthy colors for light and dark modes.
-    - [ ] Verify contrast ratios (4.5:1 / 3:1) for all text/background pairs.
-    - [ ] Update `src/styles/global.css` with `@theme` variables for light and dark modes.
-    - [ ] Apply a smooth, organic transition to color changes (`transition: color 0.3s, background-color 0.3s`).
-- [ ] Task: Add Accessibility Validation Dependencies
-    - [ ] Evaluate and add `axe-core` or a similar tool for CLI contrast checks.
-    - [ ] Create a script for automated accessibility testing.
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Palette Definition & Tokenization' (Protocol in workflow.md)
+- [x] Task: Define WCAG 2.1 AA Accessible Color Tokens
+    - [x] Research and select neutral/earthy colors for light and dark modes.
+    - [x] Verify contrast ratios (4.5:1 / 3:1) for all text/background pairs.
+    - [x] Update `src/styles/global.css` with `@theme` variables for light and dark modes.
+    - [x] Apply a smooth, organic transition to color changes (`transition: color 0.3s, background-color 0.3s`).
+- [x] Task: Add Accessibility Validation Dependencies
+    - [x] Evaluate and add `axe-core` or a similar tool for CLI contrast checks.
+    - [x] Create a script for automated accessibility testing.
+- [~] Task: Conductor - User Manual Verification 'Phase 1: Palette Definition & Tokenization' (Protocol in workflow.md)
 
 ### Phase 2: Theme Application & Integration
 - [ ] Task: Implement Theme Support in Layout
