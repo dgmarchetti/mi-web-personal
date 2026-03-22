@@ -20,3 +20,6 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [x] **Track: Crear la página /sobre-mi con contenido de about.me y realizar un rebranding global del sitio a 'Ingeniería de Vida'.**
 *Link: [./tracks/07-sobre-mi-page-and-rebranding_20260321/](./tracks/07-sobre-mi-page-and-rebranding_20260321/)*
 
+- [ ] **Track: Refactorizar el contenido de la página /sobre-mi reemplazando los textos actuales por el manifiesto de 'Ingeniería de Vida', manteniendo el diseño orgánico y la foto.**
+*Link: [./tracks/08-sobre-mi-content-refactor_20260321/](./tracks/08-sobre-mi-content-refactor_20260321/)*
+

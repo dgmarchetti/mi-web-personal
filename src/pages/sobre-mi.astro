@@ -1,24 +1,34 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
 const profile = {
   name: "Diego G. Marchetti",
-  title: "Ingeniero de Sistemas & Especialista en GenAI",
-  image: "https://assets.about.me/background/users/d/i/e/diegomarchetti_1472131432_9.jpg",
-  interests: ["Tecnología", "Música", "Fotografía", "Emprendimiento", "Programación", "Data Science"]
+  title: "Ingeniero de Sistemas & Especialista en GenAI aplicada",
+  image:
+    "https://assets.about.me/background/users/d/i/e/diegomarchetti_1472131432_9.jpg",
+  interests: [
+    "Tecnología",
+    "Música",
+    "Fotografía",
+    "Emprendimiento",
+    "Programación",
+    "Data Science",
+  ],
 };
 ---
 
 <Layout title={`Sobre mí | Ingeniería de Vida`}>
-	<main class="max-w-4xl mx-auto px-4 py-12 md:py-20">
-		<div class="flex flex-col md:flex-row gap-12 items-start">
-			
+  <main class="max-w-4xl mx-auto px-4 py-12 md:py-20">
+    <div class="flex flex-col md:flex-row gap-12 items-start">
       <!-- Organic Image Profile -->
       <div class="shrink-0 mx-auto md:mx-0 relative group">
-        <div class="absolute inset-0 bg-accent-earth/20 dark:bg-accent-earth/10 blur-xl rounded-full transform group-hover:scale-110 transition-transform duration-700 ease-out"></div>
-        <img 
-          src={profile.image} 
-          alt={`Retrato de ${profile.name}`} 
+        <div
+          class="absolute inset-0 bg-accent-earth/20 dark:bg-accent-earth/10 blur-xl rounded-full transform group-hover:scale-110 transition-transform duration-700 ease-out"
+        >
+        </div>
+        <img
+          src={profile.image}
+          alt={`Retrato de ${profile.name}`}
           class="relative w-64 h-64 object-cover object-center shadow-lg transition-transform duration-700 hover:-translate-y-2 organic-mask"
           width="256"
           height="256"
@@ -27,65 +37,124 @@ const profile = {
       </div>
 
       <!-- Content -->
-			<div class="flex-grow prose prose-neutral dark:prose-invert prose-lg max-w-none">
-				<header class="mb-10 not-prose">
-					<h1 class="text-4xl md:text-5xl font-bold text-text-main leading-tight mb-4 font-organic">
-						{profile.name}
-					</h1>
-					<p class="text-2xl text-accent-earth font-medium">
-						{profile.title}
-					</p>
-				</header>
+      <div
+        class="flex-grow prose prose-neutral dark:prose-invert prose-lg max-w-none"
+      >
+        <header class="mb-10 not-prose">
+          <h1
+            class="text-4xl md:text-5xl font-bold text-text-main leading-tight mb-4 font-organic"
+          >
+            {profile.name}
+          </h1>
+          <p class="text-2xl text-accent-earth font-medium">
+            {profile.title}
+          </p>
+        </header>
 
         <section class="mb-12">
-          <h2 class="text-2xl font-bold text-text-main mb-6 border-b border-neutral-warm/20 dark:border-neutral-400/20 pb-2">El Manifiesto de la Ingeniería de Vida</h2>
+          <h2
+            class="text-2xl font-bold text-text-main mb-6 border-b border-neutral-warm/20 dark:border-neutral-400/20 pb-2"
+          >
+            El Manifiesto de la Ingeniería de Vida
+          </h2>
           <p class="text-text-main/90 leading-relaxed mb-6">
-            Soy ingeniero de sistemas y vivo en Alta Gracia, Córdoba, Argentina. Mi filosofía profesional y personal se resume en un concepto simple: <strong>automatizar lo repetitivo para enfocarnos en lo que realmente importa.</strong>
+            Soy <strong>Ingeniero en Sistemas de Información</strong> y vivo en Alta
+            Gracia, Córdoba, Argentina.
           </p>
           <p class="text-text-main/90 leading-relaxed mb-6">
-            A través de la Inteligencia Artificial Generativa (GenAI), la programación y la inteligencia de negocios (BI), construyo ecosistemas digitales y herramientas que delegan el trabajo operativo a las máquinas. El objetivo final no es trabajar más, sino recuperar tiempo de calidad para la vida humana.
+            <strong
+              >Ayudo a personas curiosas a automatizar su vida con IA, sistemas
+              y tecnología.</strong
+            >
+          </p>
+          <p class="text-text-main/90 leading-relaxed mb-6">
+            Diseño soluciones con GenAI, no-code, domótica y agentes
+            inteligentes que eliminan el trabajo operativo y construyen
+            ecosistemas digitales eficientes.
+          </p>
+          <p class="text-text-main/90 leading-relaxed mb-6">
+            El objetivo no es hacer más, sino vivir mejor: recuperar tiempo para
+            enfocarlo en lo que realmente importa.
           </p>
         </section>
 
         <section class="mb-12">
-          <h2 class="text-2xl font-bold text-text-main mb-6 border-b border-neutral-warm/20 dark:border-neutral-400/20 pb-2">Áreas de Enfoque</h2>
+          <h2
+            class="text-2xl font-bold text-text-main mb-6 border-b border-neutral-warm/20 dark:border-neutral-400/20 pb-2"
+          >
+            Áreas de Enfoque
+          </h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 not-prose">
-            <div class="bg-bg-warm/30 dark:bg-neutral-500/20 p-6 rounded-organic border border-neutral-warm/10 dark:border-neutral-400/10">
-              <h3 class="text-lg font-bold text-accent-earth mb-2">Ingeniería & Arquitectura</h3>
-              <p class="text-sm text-text-muted">Diseño de sistemas robustos, escalables y orientados a la filosofía "Presupuesto Cero".</p>
+            <div
+              class="bg-bg-warm/30 dark:bg-neutral-500/20 p-6 rounded-organic border border-neutral-warm/10 dark:border-neutral-400/10"
+            >
+              <h3 class="text-lg font-bold text-accent-earth mb-2">
+                Ingeniería & Arquitectura
+              </h3>
+              <p class="text-sm text-text-muted">
+                Diseño de sistemas robustos, escalables y orientados a la
+                filosofía "Presupuesto Cero".
+              </p>
             </div>
-            <div class="bg-bg-warm/30 dark:bg-neutral-500/20 p-6 rounded-organic border border-neutral-warm/10 dark:border-neutral-400/10">
-              <h3 class="text-lg font-bold text-accent-earth mb-2">Inteligencia de Negocios</h3>
-              <p class="text-sm text-text-muted">Análisis y estructuración de datos para la toma de decisiones estratégicas.</p>
+            <div
+              class="bg-bg-warm/30 dark:bg-neutral-500/20 p-6 rounded-organic border border-neutral-warm/10 dark:border-neutral-400/10"
+            >
+              <h3 class="text-lg font-bold text-accent-earth mb-2">
+                Inteligencia de Negocios
+              </h3>
+              <p class="text-sm text-text-muted">
+                Análisis y estructuración de datos para la toma de decisiones
+                estratégicas.
+              </p>
             </div>
-            <div class="bg-bg-warm/30 dark:bg-neutral-500/20 p-6 rounded-organic border border-neutral-warm/10 dark:border-neutral-400/10">
-              <h3 class="text-lg font-bold text-accent-earth mb-2">Sistemas GenAI</h3>
-              <p class="text-sm text-text-muted">Orquestación de agentes IA y flujos de trabajo autónomos.</p>
+            <div
+              class="bg-bg-warm/30 dark:bg-neutral-500/20 p-6 rounded-organic border border-neutral-warm/10 dark:border-neutral-400/10"
+            >
+              <h3 class="text-lg font-bold text-accent-earth mb-2">
+                Sistemas GenAI
+              </h3>
+              <p class="text-sm text-text-muted">
+                Orquestación de agentes IA y flujos de trabajo autónomos.
+              </p>
             </div>
-            <div class="bg-bg-warm/30 dark:bg-neutral-500/20 p-6 rounded-organic border border-neutral-warm/10 dark:border-neutral-400/10">
-              <h3 class="text-lg font-bold text-accent-earth mb-2">Consultoría</h3>
-              <p class="text-sm text-text-muted">Ayudando a empresas a optimizar procesos y adoptar nuevas tecnologías.</p>
+            <div
+              class="bg-bg-warm/30 dark:bg-neutral-500/20 p-6 rounded-organic border border-neutral-warm/10 dark:border-neutral-400/10"
+            >
+              <h3 class="text-lg font-bold text-accent-earth mb-2">
+                Consultoría
+              </h3>
+              <p class="text-sm text-text-muted">
+                Ayudando a empresas a optimizar procesos y adoptar nuevas
+                tecnologías.
+              </p>
             </div>
           </div>
         </section>
 
         <section>
-          <h2 class="text-2xl font-bold text-text-main mb-6 border-b border-neutral-warm/20 dark:border-neutral-400/20 pb-2">El lado humano</h2>
+          <h2
+            class="text-2xl font-bold text-text-main mb-6 border-b border-neutral-warm/20 dark:border-neutral-400/20 pb-2"
+          >
+            El lado humano
+          </h2>
           <p class="text-text-main/90 leading-relaxed mb-6">
-            Cuando las máquinas trabajan, yo me dedico a explorar mis verdaderos intereses. Soy un apasionado de la música, la fotografía y el emprendimiento. 
+            Cuando las máquinas trabajan, yo me dedico a explorar mis verdaderos
+            intereses. Soy un apasionado de la música, la fotografía y el
+            emprendimiento.
           </p>
           <div class="flex flex-wrap gap-3 mt-6 not-prose">
-            {profile.interests.map(interest => (
-              <span class="px-4 py-2 bg-accent-green/10 dark:bg-accent-green/5 text-accent-earth text-sm font-medium rounded-full border border-accent-green/20 dark:border-accent-green/10">
-                {interest}
-              </span>
-            ))}
+            {
+              profile.interests.map((interest) => (
+                <span class="px-4 py-2 bg-accent-green/10 dark:bg-accent-green/5 text-accent-earth text-sm font-medium rounded-full border border-accent-green/20 dark:border-accent-green/10">
+                  {interest}
+                </span>
+              ))
+            }
           </div>
         </section>
-
-			</div>
-		</div>
-	</main>
+      </div>
+    </div>
+  </main>
 </Layout>
 
 <style>
@@ -106,8 +175,8 @@ const profile = {
       border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
   }
-  
+
   .font-organic {
-		letter-spacing: -0.02em;
-	}
+    letter-spacing: -0.02em;
+  }
 </style>
