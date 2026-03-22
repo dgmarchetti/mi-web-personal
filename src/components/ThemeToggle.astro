@@ -1,0 +1,65 @@
+---
+---
+
+<button
+  id="theme-toggle"
+  class="relative inline-flex h-10 w-10 items-center justify-center rounded-full bg-bg-warm/50 dark:bg-neutral-500/30 text-text-muted hover:text-accent-earth transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent-earth/50 border border-neutral-warm/20 dark:border-neutral-400/20 shadow-sm overflow-hidden"
+  aria-label="Alternar tema claro/oscuro"
+>
+  <!-- Sun Icon -->
+  <svg
+    id="sun-icon"
+    class="h-5 w-5 absolute transition-all duration-500 transform dark:-translate-y-12 dark:opacity-0"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l.707.707M6.343 6.343l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"
+    />
+  </svg>
+  
+  <!-- Moon Icon -->
+  <svg
+    id="moon-icon"
+    class="h-5 w-5 absolute transition-all duration-500 transform translate-y-12 opacity-0 dark:translate-y-0 dark:opacity-100"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+    />
+  </svg>
+</button>
+
+<script>
+  const handleToggleClick = () => {
+    const element = document.documentElement;
+    element.classList.toggle("dark");
+
+    const isDark = element.classList.contains("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    
+    // Update aria-label for accessibility
+    const toggle = document.getElementById("theme-toggle");
+    if (toggle) {
+      toggle.setAttribute("aria-label", isDark ? "Cambiar a modo claro" : "Cambiar a modo oscuro");
+    }
+  };
+
+  document.getElementById("theme-toggle")?.addEventListener("click", handleToggleClick);
+
+  // Re-run logic on page navigation for Astro view transitions (if enabled later)
+  document.addEventListener("astro:after-swap", () => {
+    document.getElementById("theme-toggle")?.addEventListener("click", handleToggleClick);
+  });
+</script>

@@ -12,28 +12,28 @@ Implementar un sistema robusto de alternancia de tema (claro/oscuro) que persist
 ## Implementation Steps
 
 ### Phase 1: Logic & Flash Prevention
-- [ ] Task: Implement Head Script for FOUC Prevention
-    - [ ] Crear un script inline en el `<head>` de `Layout.astro`.
-    - [ ] Leer el `localStorage` y la preferencia del sistema (`prefers-color-scheme`).
-    - [ ] Aplicar la clase `.dark` al elemento `document.documentElement` de forma inmediata.
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Logic & Flash Prevention' (Protocol in workflow.md)
+- [x] Task: Implement Head Script for FOUC Prevention
+    - [x] Crear un script inline en el `<head>` de `Layout.astro`.
+    - [x] Leer el `localStorage` y la preferencia del sistema (`prefers-color-scheme`).
+    - [x] Aplicar la clase `.dark` al elemento `document.documentElement` de forma inmediata.
+- [~] Task: Conductor - User Manual Verification 'Phase 1: Logic & Flash Prevention' (Protocol in workflow.md)
 
 ### Phase 2: UI Component Implementation
-- [ ] Task: Create ThemeToggle Component
-    - [ ] Diseñar el componente con iconos minimalistas (Sol/Luna) usando SVG.
-    - [ ] Añadir estilos de Tailwind para el estado activo/hover acorde a la estética orgánica.
-    - [ ] Implementar la lógica de cliente (`<script>`) para manejar el click, actualizar el `localStorage` y emitir un evento personalizado para sincronización si es necesario.
-- [ ] Task: Integrate Toggle in Header
-    - [ ] Añadir `ThemeToggle.astro` al final de la lista de navegación en `Header.astro`.
-    - [ ] Asegurar que el diseño sea responsive (móvil/desktop).
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: UI Component Implementation' (Protocol in workflow.md)
+- [x] Task: Create ThemeToggle Component
+    - [x] Diseñar el componente con iconos minimalistas (Sol/Luna) usando SVG.
+    - [x] Añadir estilos de Tailwind para el estado activo/hover acorde a la estética orgánica.
+    - [x] Implementar la lógica de cliente (`<script>`) para manejar el click, actualizar el `localStorage` y emitir un evento personalizado para sincronización si es necesario.
+- [x] Task: Integrate Toggle in Header
+    - [x] Añadir `ThemeToggle.astro` al final de la lista de navegación en `Header.astro`.
+    - [x] Asegurar que el diseño sea responsive (móvil/desktop).
+- [x] Task: Conductor - User Manual Verification 'Phase 2: UI Component Implementation' (Protocol in workflow.md)
 
 ### Phase 3: Polish & Accessibility
-- [ ] Task: Final Accessibility Audit
-    - [ ] Verificar que el botón tenga un `aria-label` descriptivo.
-    - [ ] Asegurar que el foco del teclado (`Tab`) sea claramente visible.
-    - [ ] Probar la persistencia en diferentes navegadores.
-- [ ] Task: Conductor - User Manual Verification 'Phase 3: Polish & Accessibility' (Protocol in workflow.md)
+- [x] Task: Final Accessibility Audit
+    - [x] Verificar que el botón tenga un `aria-label` descriptivo.
+    - [x] Asegurar que el foco del teclado (`Tab`) sea claramente visible.
+    - [x] Probar la persistencia en diferentes navegadores.
+- [x] Task: Conductor - User Manual Verification 'Phase 3: Polish & Accessibility' (Protocol in workflow.md)
 
 ## Verification & Testing
 - Automated: Run `npm run check` to verify types and Astro structure.
