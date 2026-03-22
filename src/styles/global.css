@@ -1,7 +1,14 @@
 @import "tailwindcss";
 
+/* 
+  TAILWIND V4 CUSTOM VARIANT
+  Ensures that the 'dark:' prefix works with the .dark class on the <html> element.
+*/
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* 
+  LIGHT MODE VARIABLES (Default)
+*/
 :root {
   --bg-base: #f8f9fa;
   --bg-warm: #f1ede4;
@@ -14,7 +21,7 @@
   
   --accent-green: #5a6a54;
 
-  /* Standard Light Neutrals */
+  /* Neutrals */
   --neutral-400: oklch(70.8% 0 0);
   --neutral-500: oklch(55.6% 0 0);
   
@@ -22,7 +29,14 @@
   --radius-organic-lg: 4rem;
 }
 
-/* Base Dark Mode variables (System preference) */
+/* 
+  DARK MODE VARIABLES
+  We define them in two ways to ensure maximum reliability in production:
+  1. System preference (if no .light override is present).
+  2. Manual .dark class override (highest priority).
+*/
+
+/* 1. System Preference */
 @media (prefers-color-scheme: dark) {
   :root:not(.light) {
     --bg-base: #1c1b19;
@@ -37,8 +51,8 @@
   }
 }
 
-/* Manual Override via Class */
-.dark {
+/* 2. Manual Class Override (High Specificity) */
+html.dark, .dark {
   --bg-base: #1c1b19;
   --bg-warm: #2a2824;
   --text-main: #f2e8cf;
