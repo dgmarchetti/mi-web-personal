@@ -11,3 +11,6 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [x] **Track: Implementar un componente de alternancia de tema (claro/oscuro) en la interfaz, con persistencia en localStorage y prevención de destellos de contenido no tematizado (FOUC).**
 *Link: [./tracks/04-theme-toggle-implementation_20260321/](./tracks/04-theme-toggle-implementation_20260321/)*
 
+- [ ] **Track: Implementar un menú de navegación tipo hamburguesa (responsive) para pantallas pequeñas como en móviles.**
+*Link: [./tracks/05-mobile-navigation-implementation_20260321/](./tracks/05-mobile-navigation-implementation_20260321/)*
+
