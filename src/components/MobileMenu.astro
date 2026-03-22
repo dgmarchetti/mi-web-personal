@@ -1,0 +1,125 @@
+---
+---
+
+<div
+  id="mobile-menu-overlay"
+  class="fixed inset-0 bg-black/40 backdrop-blur-sm z-[45] opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
+  aria-hidden="true"
+></div>
+
+<aside
+  id="mobile-menu"
+  class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-bg-base/98 dark:bg-neutral-500/98 backdrop-blur-md z-[48] transform translate-x-full transition-transform duration-500 ease-in-out shadow-2xl lg:hidden border-l border-neutral-warm/10 dark:border-neutral-400/10"
+  aria-label="Menú de navegación móvil"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+>
+  <div class="flex flex-col h-full pt-24 pb-12 px-8">
+    <nav class="flex-grow">
+      <ul class="flex flex-col space-y-8 text-2xl font-bold text-text-main">
+        <li>
+          <a href="/" class="mobile-link hover:text-accent-earth transition-colors focus:text-accent-earth outline-none focus:ring-2 focus:ring-accent-earth/50 rounded-lg p-2 -ml-2">Inicio</a>
+        </li>
+        <li>
+          <a href="/blog" class="mobile-link hover:text-accent-earth transition-colors focus:text-accent-earth outline-none focus:ring-2 focus:ring-accent-earth/50 rounded-lg p-2 -ml-2">Blog</a>
+        </li>
+        <li>
+          <a href="/sobre-mi" class="mobile-link hover:text-accent-earth transition-colors focus:text-accent-earth outline-none focus:ring-2 focus:ring-accent-earth/50 rounded-lg p-2 -ml-2">Sobre mí</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <div class="mt-auto pt-8 border-t border-neutral-warm/10 dark:border-neutral-400/10">
+      <p class="text-sm text-text-muted mb-4 font-medium uppercase tracking-wider">Ecosistema Digital</p>
+      <p class="text-xs text-text-muted leading-relaxed">
+        Ingeniero en Sistemas especializado en GenAI & Automatización "Zero-Budget".
+      </p>
+    </div>
+  </div>
+</aside>
+
+<script>
+  const menu = document.getElementById("mobile-menu");
+  const overlay = document.getElementById("mobile-menu-overlay");
+  const body = document.body;
+  const focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
+  let firstFocusableElement: HTMLElement | null = null;
+  let lastFocusableElement: HTMLElement | null = null;
+
+  const updateFocusableElements = () => {
+    if (!menu) return;
+    const focusableElements = menu.querySelectorAll(focusableElementsString);
+    firstFocusableElement = focusableElements[0] as HTMLElement;
+    lastFocusableElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+  };
+
+  const trapFocus = (e: KeyboardEvent) => {
+    if (e.key === 'Tab') {
+      if (e.shiftKey) { // Shift + Tab
+        if (document.activeElement === firstFocusableElement) {
+          e.preventDefault();
+          lastFocusableElement?.focus();
+        }
+      } else { // Tab
+        if (document.activeElement === lastFocusableElement) {
+          e.preventDefault();
+          firstFocusableElement?.focus();
+        }
+      }
+    }
+    if (e.key === 'Escape') {
+      closeMenu();
+    }
+  };
+
+  const openMenu = () => {
+    menu?.classList.remove("translate-x-full");
+    menu?.setAttribute("aria-hidden", "false");
+    overlay?.classList.remove("opacity-0", "pointer-events-none");
+    overlay?.setAttribute("aria-hidden", "false");
+    body.style.overflow = "hidden";
+    updateFocusableElements();
+    firstFocusableElement?.focus();
+    document.addEventListener('keydown', trapFocus);
+  };
+
+  const closeMenu = () => {
+    menu?.classList.add("translate-x-full");
+    menu?.setAttribute("aria-hidden", "true");
+    overlay?.classList.add("opacity-0", "pointer-events-none");
+    overlay?.setAttribute("aria-hidden", "true");
+    body.style.overflow = "";
+    document.removeEventListener('keydown', trapFocus);
+    // Return focus to toggle button
+    document.getElementById("hamburger-toggle")?.focus();
+  };
+
+  const toggleMenu = (isOpen: boolean) => {
+    if (isOpen) {
+      openMenu();
+    } else {
+      closeMenu();
+    }
+  };
+
+  // Listen to the custom event from HamburgerToggle
+  document.addEventListener("toggleMenu", ((e: CustomEvent) => {
+    toggleMenu(e.detail.isOpen);
+  }) as EventListener);
+
+  // Close when clicking overlay
+  overlay?.addEventListener("click", () => {
+    toggleMenu(false);
+    document.dispatchEvent(new CustomEvent("menuStateChange", { detail: { isOpen: false } }));
+  });
+
+  // Close when clicking a link
+  const links = document.querySelectorAll(".mobile-link");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      toggleMenu(false);
+      document.dispatchEvent(new CustomEvent("menuStateChange", { detail: { isOpen: false } }));
+    });
+  });
+</script>

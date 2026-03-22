@@ -12,34 +12,34 @@ Implementar un menú de navegación tipo hamburguesa (responsive) con un panel l
 ## Implementation Steps
 
 ### Phase 1: Logic & Basic Structure
-- [ ] Task: Create HamburgerToggle Component
-    - [ ] Diseñar un icono de tres líneas con SVG.
-    - [ ] Añadir animaciones CSS para transformar las líneas en una 'X'.
-    - [ ] Añadir atributos `aria-label` y `aria-expanded` para accesibilidad.
-- [ ] Task: Integrate Toggle in Header
-    - [ ] Modificar `Header.astro` para mostrar el `HamburgerToggle` solo en móviles (breakpoint `lg`).
-    - [ ] Asegurar que el Theme Toggle esté ubicado correctamente junto al botón de hamburguesa.
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Logic & Basic Structure' (Protocol in workflow.md)
+- [x] Task: Create HamburgerToggle Component
+    - [x] Diseñar un icono de tres líneas con SVG.
+    - [x] Añadir animaciones CSS para transformar las líneas en una 'X'.
+    - [x] Añadir atributos `aria-label` y `aria-expanded` para accesibilidad.
+- [x] Task: Integrate Toggle in Header
+    - [x] Modificar `Header.astro` para mostrar el `HamburgerToggle` solo en móviles (breakpoint `lg`).
+    - [x] Asegurar que el Theme Toggle esté ubicado correctamente junto al botón de hamburguesa.
+- [~] Task: Conductor - User Manual Verification 'Phase 1: Logic & Basic Structure' (Protocol in workflow.md)
 
 ### Phase 2: Mobile Menu Drawer & Animation
-- [ ] Task: Create MobileMenu Component
-    - [ ] Diseñar el panel lateral deslizable (side drawer) con un fondo semi-transparente y desenfoque (`backdrop-blur`).
-    - [ ] Incluir la lista de navegación duplicada o centralizada para móviles.
-    - [ ] Implementar la animación de entrada/salida (`transform: translateX`).
-- [ ] Task: Implement Navigation Logic (JS)
-    - [ ] Añadir un script en el cliente para manejar el evento `click` del toggle.
-    - [ ] Gestionar la clase `open`/`active` en el menú y el toggle.
-    - [ ] Implementar el cierre automático al hacer clic en un enlace o fuera del panel.
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: Mobile Menu Drawer & Animation' (Protocol in workflow.md)
+- [x] Task: Create MobileMenu Component
+    - [x] Diseñar el panel lateral deslizable (side drawer) con un fondo semi-transparente y desenfoque (`backdrop-blur`).
+    - [x] Incluir la lista de navegación duplicada o centralizada para móviles.
+    - [x] Implementar la animación de entrada/salida (`transform: translateX`).
+- [x] Task: Implement Navigation Logic (JS)
+    - [x] Añadir un script en el cliente para manejar el evento `click` del toggle.
+    - [x] Gestionar la clase `open`/`active` en el menú y el toggle.
+    - [x] Implementar el cierre automático al hacer clic en un enlace o fuera del panel.
+- [~] Task: Conductor - User Manual Verification 'Phase 2: Mobile Menu Drawer & Animation' (Protocol in workflow.md)
 
 ### Phase 3: Accessibility & Final Polish
-- [ ] Task: Refine Accessibility (A11y)
-    - [ ] Asegurar que el menú móvil sea navegable mediante teclado (`Tab`).
-    - [ ] Probar con lectores de pantalla (VoiceOver/TalkBack).
-    - [ ] Verificar que no haya desbordamiento de scroll (`overflow-hidden` en el `body`) cuando el menú esté abierto.
-- [ ] Task: Final Responsive Audit
-    - [ ] Verificar el comportamiento en diferentes tamaños de pantalla (iPhone, iPad, Desktop).
-- [ ] Task: Conductor - User Manual Verification 'Phase 3: Accessibility & Final Polish' (Protocol in workflow.md)
+- [x] Task: Refine Accessibility (A11y)
+    - [x] Asegurar que el menú móvil sea navegable mediante teclado (`Tab`).
+    - [x] Probar con lectores de pantalla (VoiceOver/TalkBack).
+    - [x] Verificar que no haya desbordamiento de scroll (`overflow-hidden` en el `body`) cuando el menú esté abierto.
+- [x] Task: Final Responsive Audit
+    - [x] Verificar el comportamiento en diferentes tamaños de pantalla (iPhone, iPad, Desktop).
+- [x] Task: Conductor - User Manual Verification 'Phase 3: Accessibility & Final Polish' (Protocol in workflow.md)
 
 ## Verification & Testing
 - Automated: Run `npm run check` para validar tipos y estructura.

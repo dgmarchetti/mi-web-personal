@@ -1,0 +1,71 @@
+---
+---
+
+<button
+  id="hamburger-toggle"
+  class="relative inline-flex h-10 w-10 items-center justify-center rounded-lg hover:bg-bg-warm/50 dark:hover:bg-neutral-500/30 text-text-main transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-accent-earth/50 z-50 lg:hidden"
+  aria-label="Abrir menú de navegación"
+  aria-expanded="false"
+  aria-controls="mobile-menu"
+>
+  <div class="relative w-6 h-5">
+    <span
+      id="bar-1"
+      class="absolute left-0 top-0 block h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out"
+    ></span>
+    <span
+      id="bar-2"
+      class="absolute left-0 top-1/2 block h-0.5 w-6 -translate-y-1/2 bg-current transition-all duration-300 ease-in-out"
+    ></span>
+    <span
+      id="bar-3"
+      class="absolute left-0 bottom-0 block h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out"
+    ></span>
+  </div>
+</button>
+
+<style>
+  @reference "../styles/global.css";
+
+  /* Morphing states */
+  #hamburger-toggle.active #bar-1 {
+    @apply top-1/2 -translate-y-1/2 rotate-45;
+  }
+  #hamburger-toggle.active #bar-2 {
+    @apply opacity-0 -translate-x-2;
+  }
+  #hamburger-toggle.active #bar-3 {
+    @apply bottom-1/2 translate-y-1/2 -rotate-45;
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById("hamburger-toggle");
+  
+  const handleToggle = () => {
+    const isActive = toggle?.classList.toggle("active");
+    toggle?.setAttribute("aria-expanded", isActive ? "true" : "false");
+    toggle?.setAttribute("aria-label", isActive ? "Cerrar menú de navegación" : "Abrir menú de navegación");
+    
+    // Dispatch custom event for MobileMenu to listen to
+    const event = new CustomEvent("toggleMenu", { detail: { isOpen: isActive } });
+    document.dispatchEvent(event);
+  };
+
+  toggle?.addEventListener("click", handleToggle);
+
+  // Sync state if menu is closed from elsewhere (e.g. clicking outside)
+  document.addEventListener("menuStateChange", ((e: CustomEvent) => {
+    const isOpen = e.detail.isOpen;
+    if (isOpen) {
+      toggle?.classList.add("active");
+    } else {
+      toggle?.classList.remove("active");
+    }
+    toggle?.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  }) as EventListener);
+
+  document.addEventListener("astro:after-swap", () => {
+    document.getElementById("hamburger-toggle")?.addEventListener("click", handleToggle);
+  });
+</script>
