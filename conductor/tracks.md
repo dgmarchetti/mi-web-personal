@@ -14,3 +14,6 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [x] **Track: Implementar un menú de navegación tipo hamburguesa (responsive) para pantallas pequeñas como en móviles.**
 *Link: [./tracks/05-mobile-navigation-implementation_20260321/](./tracks/05-mobile-navigation-implementation_20260321/)*
 
+- [ ] **Track: Corregir bug de sincronización de temas en producción donde los contenedores externos no responden al cambio manual.**
+*Link: [./tracks/06-theme-sync-bug-production_20260321/](./tracks/06-theme-sync-bug-production_20260321/)*
+
