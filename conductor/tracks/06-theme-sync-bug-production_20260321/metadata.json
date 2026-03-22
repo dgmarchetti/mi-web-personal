@@ -1,8 +1,0 @@
-{
-  "track_id": "06-theme-sync-bug-production_20260321",
-  "type": "bug",
-  "status": "new",
-  "created_at": "2026-03-21T00:00:00Z",
-  "updated_at": "2026-03-21T00:00:00Z",
-  "description": "Corregir bug de sincronización de temas en producción donde los contenedores externos no responden al cambio manual."
-}

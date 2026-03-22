@@ -1,8 +1,0 @@
-{
-  "track_id": "03-accessible-color-palette_20260321",
-  "type": "feature",
-  "status": "new",
-  "created_at": "2026-03-21T00:00:00Z",
-  "updated_at": "2026-03-21T00:00:00Z",
-  "description": "Definir paleta de colores accesible (WCAG 2.1 AA) para modo claro y oscuro utilizando variables de CSS en Tailwind v4, asegurando contrastes de 4.5:1 para texto normal y 3:1 para texto grande."
-}

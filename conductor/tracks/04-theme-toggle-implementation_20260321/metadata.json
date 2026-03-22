@@ -1,8 +1,0 @@
-{
-  "track_id": "04-theme-toggle-implementation_20260321",
-  "type": "feature",
-  "status": "new",
-  "created_at": "2026-03-21T00:00:00Z",
-  "updated_at": "2026-03-21T00:00:00Z",
-  "description": "Implementar un componente de alternancia de tema (claro/oscuro) en la interfaz, con persistencia en localStorage y prevención de destellos de contenido no tematizado (FOUC)."
-}
