@@ -17,3 +17,6 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [x] **Track: Corregir bug de sincronización de temas en producción donde los contenedores externos no responden al cambio manual.**
 *Link: [./tracks/06-theme-sync-bug-production_20260321/](./tracks/06-theme-sync-bug-production_20260321/)*
 
+- [ ] **Track: Crear la página /sobre-mi con contenido de about.me y realizar un rebranding global del sitio a 'Ingeniería de Vida'.**
+*Link: [./tracks/07-sobre-mi-page-and-rebranding_20260321/](./tracks/07-sobre-mi-page-and-rebranding_20260321/)*
+
