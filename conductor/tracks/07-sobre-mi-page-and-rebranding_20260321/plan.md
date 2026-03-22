@@ -13,29 +13,29 @@ Realizar el rebranding global del sitio a "Ingeniería de Vida" y crear la pági
 ## Implementation Steps
 
 ### Phase 1: Global Rebranding
-- [ ] Task: Update Global Branding in Layout & UI
-    - [ ] Cambiar el título por defecto y meta tags en `src/layouts/Layout.astro`.
-    - [ ] Actualizar el nombre de la marca en `src/components/Header.astro`.
-    - [ ] Actualizar el texto de copyright y branding en `src/components/Footer.astro`.
-    - [ ] Actualizar el título principal en `src/pages/index.astro` si es necesario.
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Global Rebranding' (Protocol in workflow.md)
+- [x] Task: Update Global Branding in Layout & UI
+    - [x] Cambiar el título por defecto y meta tags en `src/layouts/Layout.astro`.
+    - [x] Actualizar el nombre de la marca en `src/components/Header.astro`.
+    - [x] Actualizar el texto de copyright y branding en `src/components/Footer.astro`.
+    - [x] Actualizar el título principal en `src/pages/index.astro` si es necesario.
+- [~] Task: Conductor - User Manual Verification 'Phase 1: Global Rebranding' (Protocol in workflow.md)
 
 ### Phase 2: Page Creation (/sobre-mi)
-- [ ] Task: Create Sobre-mí Page Structure
-    - [ ] Crear `src/pages/sobre-mi.astro` usando el `Layout` base.
-    - [ ] Implementar el contenido extraído de `about.me` con la narrativa "Philosophical/GenAI Focus".
-- [ ] Task: Implement Organic Profile Picture
-    - [ ] Insertar la imagen de `about.me` con una máscara orgánica usando CSS moderno.
-    - [ ] Asegurar que sea responsive y accesible (alt text).
-- [ ] Task: Apply Advanced Styling
-    - [ ] Refinar la tipografía y el espaciado para un perfil de alta capacidad técnica.
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: Page Creation (/sobre-mi)' (Protocol in workflow.md)
+- [x] Task: Create Sobre-mí Page Structure
+    - [x] Crear `src/pages/sobre-mi.astro` usando el `Layout` base.
+    - [x] Implementar el contenido extraído de `about.me` con la narrativa "Philosophical/GenAI Focus".
+- [x] Task: Implement Organic Profile Picture
+    - [x] Insertar la imagen de `about.me` con una máscara orgánica usando CSS moderno.
+    - [x] Asegurar que sea responsive y accesible (alt text).
+- [x] Task: Apply Advanced Styling
+    - [x] Refinar la tipografía y el espaciado para un perfil de alta capacidad técnica.
+- [~] Task: Conductor - User Manual Verification 'Phase 2: Page Creation (/sobre-mi)' (Protocol in workflow.md)
 
 ### Phase 3: Final Integration & SEO
-- [ ] Task: Final SEO & Link Audit
-    - [ ] Verificar que todos los enlaces internos apunten a los nombres correctos.
-    - [ ] Comprobar los metadatos en redes sociales (Open Graph) si están presentes.
-- [ ] Task: Conductor - User Manual Verification 'Phase 3: Final Integration & SEO' (Protocol in workflow.md)
+- [x] Task: Final SEO & Link Audit
+    - [x] Verificar que todos los enlaces internos apunten a los nombres correctos.
+    - [x] Comprobar los metadatos en redes sociales (Open Graph) si están presentes.
+- [x] Task: Conductor - User Manual Verification 'Phase 3: Final Integration & SEO' (Protocol in workflow.md)
 
 ## Verification & Testing
 - Automated: Run `npm run check`.
