@@ -3,33 +3,114 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Inicio | Ingeniería de Vida">
-	<section class="prose prose-neutral dark:prose-invert max-w-none">
-		<h1 class="text-accent-earth mb-2">Ingeniería de Vida</h1>
-		<p class="text-xl font-medium text-text-main mb-8 font-organic">
-			Automatizá lo repetitivo. Enfocate en lo que importa.
-		</p>
-		<p class="text-lg leading-relaxed text-text-main/80 dark:text-text-main mb-8">
-			Soy Ingeniero en Sistemas especializado en GenAI. Este espacio es mi ecosistema digital, 
-			creado bajo la filosofía de "Presupuesto Cero" y automatización extrema.
-		</p>
-
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-			<div class="bg-bg-warm/30 dark:bg-black/20 p-8 rounded-organic border border-neutral-warm/10 dark:border-neutral-400/10 hover:shadow-md transition-all duration-300">
-				<h2 class="text-2xl font-bold text-accent-earth mb-3 mt-0">GenAI & Automation</h2>
-				<p class="text-base text-text-muted dark:text-text-main leading-relaxed">
-					Explora cómo utilizo agentes y automatización extrema para delegar el trabajo operativo y ganar libertad real.
-				</p>
+	<main class="max-w-4xl mx-auto py-12 md:py-20 px-4">
+		
+		<!-- 1. HERO -->
+		<section class="mb-24 text-center md:text-left">
+			<h1 class="text-5xl md:text-7xl font-bold text-text-main leading-tight mb-8 font-organic tracking-tight">
+				Automatizo lo que no debería ocupar tu tiempo.
+			</h1>
+			<p class="text-xl md:text-2xl leading-relaxed text-text-muted dark:text-text-main/90 mb-12 max-w-3xl">
+				Diseño sistemas, uso inteligencia artificial y automatización para eliminar trabajo operativo y recuperar tiempo para lo que realmente importa.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+				<a href="/sobre-mi" class="bg-accent-earth text-bg-base px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-lg hover:-translate-y-1 active:scale-95 text-center">
+					Ver cómo lo hago
+				</a>
+				<a href="/blog" class="bg-bg-warm dark:bg-neutral-500/30 text-text-main px-8 py-4 rounded-full font-bold text-lg border border-neutral-warm/20 dark:border-neutral-400/20 transition-all hover:shadow-md hover:-translate-y-1 active:scale-95 text-center">
+					Explorar proyectos
+				</a>
 			</div>
-			<div class="bg-accent-green/10 dark:bg-accent-green/5 p-8 rounded-organic border border-accent-green/10 dark:border-accent-green/5 hover:shadow-md transition-all duration-300">
-				<h2 class="text-2xl font-bold text-accent-earth mb-3 mt-0">Zero-Budget Tools</h2>
-				<p class="text-base text-text-muted dark:text-text-main leading-relaxed">
-					Proyectos y guías sobre cómo construir sistemas robustos y escalables sin incurrir en costos de infraestructura.
-				</p>
-			</div>
-		</div>
+		</section>
 
-		<div class="mt-20 py-8 text-center text-text-muted dark:text-text-main/60 italic border-t border-neutral-warm/10 dark:border-neutral-400/10 transition-colors">
-			<p class="text-lg font-medium">"El código se escribe solo mientras yo cuido el jardín."</p>
-		</div>
-	</section>
+		<!-- 2. BLOQUE DE CONTEXTO -->
+		<section class="mb-24 prose prose-neutral dark:prose-invert prose-xl max-w-none">
+			<h2 class="text-3xl font-bold text-accent-earth mb-6 border-b border-neutral-warm/20 dark:border-neutral-400/20 pb-4">
+				No es sobre tecnología. Es sobre cómo vivís.
+			</h2>
+			<p class="mb-6 text-text-main/90">La mayoría usa la tecnología para hacer más cosas.<br>Yo la uso para hacer menos.</p>
+			<ul class="list-none pl-0 space-y-2 mb-8 text-text-muted dark:text-text-main/80">
+				<li>— Menos tareas repetitivas.</li>
+				<li>— Menos carga mental.</li>
+				<li>— Menos fricción en el día a día.</li>
+			</ul>
+			<p class="text-3xl font-bold text-text-main font-organic tracking-tight">
+				Más tiempo. Más foco. Más vida.
+			</p>
+		</section>
+
+		<!-- 3. QUÉ HAGO (PILARES) -->
+		<section class="mb-24">
+			<h2 class="text-3xl font-bold text-text-main mb-8 font-organic">Cómo aplico esto</h2>
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+				
+				<article class="bg-bg-warm/30 dark:bg-black/20 p-8 rounded-organic border border-neutral-warm/10 dark:border-neutral-400/10 hover:shadow-md transition-all duration-300">
+					<h3 class="text-xl font-bold text-accent-earth mb-3">Automatización con IA</h3>
+					<p class="text-base text-text-muted dark:text-text-main/90 leading-relaxed">
+						Delego tareas operativas usando GenAI y agentes.
+					</p>
+				</article>
+
+				<article class="bg-bg-warm/30 dark:bg-black/20 p-8 rounded-organic border border-neutral-warm/10 dark:border-neutral-400/10 hover:shadow-md transition-all duration-300">
+					<h3 class="text-xl font-bold text-accent-earth mb-3">Sistemas personales</h3>
+					<p class="text-base text-text-muted dark:text-text-main/90 leading-relaxed">
+						Diseño estructuras que organizan y simplifican la vida.
+					</p>
+				</article>
+
+				<article class="bg-bg-warm/30 dark:bg-black/20 p-8 rounded-organic border border-neutral-warm/10 dark:border-neutral-400/10 hover:shadow-md transition-all duration-300">
+					<h3 class="text-xl font-bold text-accent-earth mb-3">Domótica</h3>
+					<p class="text-base text-text-muted dark:text-text-main/90 leading-relaxed">
+						Automatizo el entorno físico para que funcione solo.
+					</p>
+				</article>
+
+				<article class="bg-bg-warm/30 dark:bg-black/20 p-8 rounded-organic border border-neutral-warm/10 dark:border-neutral-400/10 hover:shadow-md transition-all duration-300">
+					<h3 class="text-xl font-bold text-accent-earth mb-3">Ecosistemas digitales</h3>
+					<p class="text-base text-text-muted dark:text-text-main/90 leading-relaxed">
+						Integro herramientas en sistemas que trabajan sin intervención.
+					</p>
+				</article>
+
+			</div>
+		</section>
+
+		<!-- 4. DIFERENCIAL -->
+		<section class="mb-24 bg-accent-green/10 dark:bg-accent-green/5 p-8 md:p-12 rounded-organic-lg border border-accent-green/20 dark:border-accent-green/10">
+			<h2 class="text-2xl md:text-3xl font-bold text-text-main mb-6 font-organic">
+				Esto no es contenido. Es práctica.
+			</h2>
+			<div class="prose prose-neutral dark:prose-invert prose-lg max-w-none text-text-muted dark:text-text-main/90">
+				<p>Todo lo que ves acá lo uso en mi vida real.</p>
+				<p>No son ideas teóricas ni tendencias.<br>Son sistemas diseñados para ahorrar tiempo y reducir fricción todos los días.</p>
+			</div>
+		</section>
+
+		<!-- 5 & 6. PUENTES -->
+		<section class="mb-24 grid grid-cols-1 md:grid-cols-2 gap-8">
+			<div class="border-l-4 border-accent-earth pl-6 py-2">
+				<p class="text-text-muted dark:text-text-main/80 mb-3">Si querés entender el por qué detrás de todo esto:</p>
+				<a href="/sobre-mi" class="text-xl font-bold text-text-main hover:text-accent-earth transition-colors inline-flex items-center gap-2 group/link">
+					→ Qué es Ingeniería de Vida
+				</a>
+			</div>
+			<div class="border-l-4 border-accent-green pl-6 py-2">
+				<p class="text-text-muted dark:text-text-main/80 mb-3">Estos son algunos de los sistemas que estoy construyendo:</p>
+				<a href="/blog" class="text-xl font-bold text-text-main hover:text-accent-earth transition-colors inline-flex items-center gap-2 group/link">
+					→ Ver proyectos
+				</a>
+			</div>
+		</section>
+
+		<!-- 7. CIERRE -->
+		<section class="text-center pt-16 border-t border-neutral-warm/20 dark:border-neutral-400/20">
+			<p class="text-2xl md:text-3xl font-bold text-text-main font-organic tracking-tight mb-2">
+				La tecnología debería devolverte tiempo.
+			</p>
+			<p class="text-xl text-text-muted dark:text-text-main/80 italic">
+				Este espacio es sobre cómo lograrlo.
+			</p>
+		</section>
+
+	</main>
 </Layout>
