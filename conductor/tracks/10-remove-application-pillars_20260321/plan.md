@@ -8,14 +8,14 @@ Completely remove the "Cómo aplico esto" section from the Home page (`src/pages
 
 ## Implementation Steps
 
-### Phase 1: Content Removal & Layout Adjustment
-- [ ] Task: Remove "Cómo aplico esto" Section
-    - [ ] Locate the `<section>` containing the "Cómo aplico esto" header and the 4-article grid in `src/pages/index.astro`.
-    - [ ] Delete the entire section block.
-- [ ] Task: Adjust Vertical Spacing
-    - [ ] Review the `mb-24` (or similar) margin classes on the preceding and following sections.
-    - [ ] Adjust spacing if necessary to ensure the transition between the Context block and the Differential block feels organic and intentional.
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Content Removal & Layout Adjustment' (Protocol in workflow.md)
+### Phase 1: Content Removal & Layout Adjustment [checkpoint: 94f75d0]
+- [x] Task: Remove "Cómo aplico esto" Section
+    - [x] Locate the `<section>` containing the "Cómo aplico esto" header and the 4-article grid in `src/pages/index.astro`.
+    - [x] Delete the entire section block.
+- [x] Task: Adjust Vertical Spacing
+    - [x] Review the `mb-24` (or similar) margin classes on the preceding and following sections.
+    - [x] Adjust spacing if necessary to ensure the transition between the Context block and the Differential block feels organic and intentional.
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Content Removal & Layout Adjustment' (Protocol in workflow.md)
 
 ## Verification & Testing
 - Automated: Run `npm run build` to ensure the project still compiles correctly.
