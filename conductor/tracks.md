@@ -8,3 +8,6 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [x] **Track: Rediseño estratégico de la Home: transformar el mensaje de un portfolio genérico a un manifiesto de 'Ingeniería de Vida'.**
 *Link: [./tracks/09-home-strategic-redesign_20260321/](./tracks/09-home-strategic-redesign_20260321/)*
+
+- [ ] **Track: SACAR COMPLETAMENTE de la HOME: Todo este bloque: Automatización con IA Sistemas personales Domótica Ecosistemas digitales**
+*Link: [./tracks/10-remove-application-pillars_20260321/](./tracks/10-remove-application-pillars_20260321/)*
